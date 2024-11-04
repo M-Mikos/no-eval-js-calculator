@@ -1,0 +1,191 @@
+:root {
+  --color-surface: hsl(225, 5%, 15%);
+  --color-surface--hover: hsl(225, 5%, 20%);
+  --color-surface--active: hsl(225, 5%, 40%);
+  --color-content: hsl(225, 5%, 95%);
+  --color-content--darker: hsl(225, 5%, 80%);
+  --color-primary: hsl(225, 5%, 30%);
+  --color-primary--hover: hsl(225, 5%, 35%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  background-color: var(--color-surface);
+  color: var(--color-content);
+  overflow-x: hidden;
+}
+
+.content {
+  display: grid;
+  flex: 1;
+  width: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 100%;
+  place-self: center;
+
+  max-width: 32rem;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  padding: 1rem;
+}
+
+.input {
+  display: block;
+  padding: 0.5rem 0rem;
+  text-align: right;
+  font-size: 3rem;
+  background-color: transparent;
+  color: var(--color-content);
+  border: none;
+}
+
+.output {
+  padding: 0.5rem 0rem;
+  text-align: right;
+  font-size: 1.6rem;
+  color: var(--color-content--darker);
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-areas:
+    "ac ac del plus"
+    "number-7 number-8 number-9 minus"
+    "number-4 number-5 number-6 multiply"
+    "number-1 number-2 number-3 divide"
+    "point number-0 equals equals";
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.button {
+  border: 2px solid var(--color-primary--hover);
+  border-radius: 0.2rem;
+  background-color: var(--color-surface);
+  height: 6rem;
+  color: var(--color-content);
+  font-size: 2rem;
+}
+
+.button:hover {
+  background-color: var(--color-surface--hover);
+}
+
+.button:active {
+  background-color: var(--color-surface--active);
+}
+
+.button--highlighted {
+  background-color: var(--color-primary);
+  font-size: 1.6rem;
+}
+
+.button--highlighted:hover {
+  background-color: var(--color-primary--hover);
+}
+
+.button--highlighted:active {
+  background-color: var(--color-surface--active);
+}
+
+#button-clear {
+  grid-area: ac;
+}
+
+#button-delete {
+  grid-area: del;
+}
+
+#button-0 {
+  grid-area: number-0;
+}
+
+#button-1 {
+  grid-area: number-1;
+}
+
+#button-2 {
+  grid-area: number-2;
+}
+
+#button-3 {
+  grid-area: number-3;
+}
+
+#button-4 {
+  grid-area: number-4;
+}
+
+#button-5 {
+  grid-area: number-5;
+}
+
+#button-6 {
+  grid-area: number-6;
+}
+
+#button-7 {
+  grid-area: number-7;
+}
+
+#button-8 {
+  grid-area: number-8;
+}
+
+#button-9 {
+  grid-area: number-9;
+}
+
+#button-point {
+  grid-area: point;
+}
+
+#button-plus {
+  grid-area: plus;
+}
+
+#button-minus {
+  grid-area: minus;
+}
+
+#button-multiply {
+  grid-area: multiply;
+}
+
+#button-divide {
+  grid-area: divide;
+}
+
+#button-equals {
+  grid-area: equals;
+}
+
+.hidden {
+  visibility: hidden;
+}

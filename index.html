@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="container">
+    <main class="content">
+      <section class="app">
+        <div class="display">
+          <div class="output hidden">OUTPUT</div>
+          <input class="input" type="text" placeholder="0" />
+        </div>
+        <div class="keyboard">
+          <button id="button-clear" class="button button--highlighted" data-type="action" data-value="clear">AC</button>
+          <button id="button-delete" class="button button--highlighted" data-type="action" data-value="delete">
+            DEL
+          </button>
+          <button id="button-0" class="button" data-type="number" data-value="0">0</button>
+          <button id="button-1" class="button" data-type="number" data-value="1">1</button>
+          <button id="button-2" class="button" data-type="number" data-value="2">2</button>
+          <button id="button-3" class="button" data-type="number" data-value="3">3</button>
+          <button id="button-4" class="button" data-type="number" data-value="4">4</button>
+          <button id="button-5" class="button" data-type="number" data-value="5">5</button>
+          <button id="button-6" class="button" data-type="number" data-value="6">6</button>
+          <button id="button-7" class="button" data-type="number" data-value="7">7</button>
+          <button id="button-8" class="button" data-type="number" data-value="8">8</button>
+          <button id="button-9" class="button" data-type="number" data-value="9">9</button>
+          <button id="button-point" class="button" data-type="number" data-value=".">.</button>
+          <button id="button-plus" class="button button--highlighted" data-type="operator" data-value="+">+</button>
+          <button id="button-minus" class="button button--highlighted" data-type="operator" data-value="-">-</button>
+          <button id="button-multiply" class="button button--highlighted" data-type="operator" data-value="*">*</button>
+          <button id="button-divide" class="button button--highlighted" data-type="operator" data-value="/">/</button>
+          <button id="button-equals" class="button button--highlighted" data-type="action" data-value="equals">
+            =
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer>Designed & coded by <author>Marcin Mikos</author></footer>
+  </body>
+</html>
