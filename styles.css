@@ -1,5 +1,6 @@
 :root {
   --color-surface: hsl(225, 5%, 15%);
+  --color-surface--darker: hsl(225, 5%, 10%);
   --color-surface--hover: hsl(225, 5%, 20%);
   --color-surface--active: hsl(225, 5%, 40%);
   --color-content: hsl(225, 5%, 95%);
@@ -52,10 +53,13 @@ html {
   flex-direction: column;
   justify-content: stretch;
   padding: 1rem;
+  margin: 1rem;
+  background-color: var(--color-surface--darker);
 }
 
 .input {
   display: block;
+  height: 4rem;
   padding: 0.5rem 0rem;
   text-align: right;
   font-size: 3rem;

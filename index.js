@@ -5,11 +5,12 @@ const expression = [];
 // Model functions
 
 function clearExpression() {
-  expression.length = 1;
-  expression[0] = { type: "number", value: 0 };
+  expression.length = 0;
 }
 function deleteLastTerm() {
-  expression.length -= 1;
+  if (expression.length > 0) {
+    expression.length -= 1;
+  }
 }
 
 function addTerm(term) {
@@ -141,6 +142,12 @@ function updateOutputElement(outputValue) {
   output.innerHTML = outputValue;
 }
 
+function hideOutputElement() {
+  const output = document.querySelector(".output");
+  output.classList.add("hidden");
+  output.innerHTML = 0;
+}
+
 // Controller
 
 function controllClick(term) {
@@ -148,6 +155,7 @@ function controllClick(term) {
     switch (term.value) {
       case "clear":
         clearExpression();
+        hideOutputElement();
         break;
       case "delete":
         deleteLastTerm();
